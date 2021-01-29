@@ -100,9 +100,9 @@ class Client implements QueryInterface
      * @return \PiHole\Interfaces\QueryInterface
      * @link ?disable&auth=webpassword
      */
-    public function disable(): QueryInterface
+    public function disable($time): QueryInterface
     {
-        $this->endpoint = ['disable' => null];
+        $this->endpoint = ['disable' => $time];
         return $this;
     }
 
